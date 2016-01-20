@@ -2572,7 +2572,7 @@ module.exports = (function(window, document) { "use strict";
 					
 					element.attributes['style'].value.split(';').forEach(function (item) { 
 						if (item.trim().startsWith(cssPropertyName)) {
-							bestValue = item.trim().substring(cssPropertyName.length).trim().substring(1).trim())
+							bestValue = item.trim().substring(cssPropertyName.length).trim().substring(1).trim()
 							return;
 						});
 					}
