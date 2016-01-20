@@ -13,7 +13,7 @@
 	//
 	if(!window.console) {
 			
-		window.console = {
+		window.console ={
 			backlog: '',
 			
 			log: function(x) { this.backlog+=x+'\n'; if(window.debug) alert(x); },
