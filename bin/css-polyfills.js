@@ -2569,6 +2569,16 @@ module.exports = (function(window, document) { "use strict";
 					if(bestValue = element.style.getPropertyValue(cssPropertyName) || element.myStyle[cssPropertyName]) {
 						return cssSyntax.parseAListOfComponentValues(bestValue);
 					}
+					
+					element.attributes['style'].value.split(';').forEach(function (item) { 
+						if (item.trim().startsWith(cssPropertyName)) {
+							bestValue = item.trim().substring(cssPropertyName.length).trim().substring(1).trim())
+							return;
+						});
+					}
+					
+					if (bestValue)
+						return cssSyntax.parseAListOfComponentValues(bestValue);	
 				} catch(ex) {}
 				
 				// find all relevant style rules
