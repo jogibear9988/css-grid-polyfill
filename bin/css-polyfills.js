@@ -2574,8 +2574,8 @@ module.exports = (function(window, document) { "use strict";
 						if (item.trim().startsWith(cssPropertyName)) {
 							bestValue = item.trim().substring(cssPropertyName.length).trim().substring(1).trim();
 							return;
-						});
-					}
+						}
+					});
 					
 					if (bestValue)
 						return cssSyntax.parseAListOfComponentValues(bestValue);	
